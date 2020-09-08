@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Predicting Design Impactful Changes in Modern Code Review</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').scrollspy({
+			target : '#mainNavBar'
+		})
+	});
+</script>
+
+</head>
+<body>
+
+	<nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">ICSE 2O21</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#abstract">Abstract <span
+							class="sr-only">(current)</span></a></li>
+
+					<li><a href="#downloads">Downloads</a></li>
+					<li><a href="#authors">Authors</a></li>
+					<!--<li><a href="#references">References</a></li>-->
+
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+	<div class="container container-gral">
+
+		<div class="page-title">
+			<h1>
+				Predicting Design Impactful Changes in Modern Code Review<br>
+			</h1>
+		</div>
+		<br>
+		<p class="text-justify">This website contains complementary data
+			to the submitted paper.</p>
+
+		<h3 id="abstract" class="page-header">Abstract</h3>
+		<p class="text-justify">Companies have adopted modern code review
+			as a key technique for continuously monitoring and improving the
+			quality of software changes. One of the key motivations is the early
+			detection of design impactful changes in order to prevent that
+			design-degrading ones prevail after each code review. Even though
+			design degradation symptoms often lead to changes' rejections,
+			practices of modern code review alone are actually not sufficient to
+			avoid or mitigate design decay. Software design degrades whenever one
+			or more symptoms of poor structural decisions, usually represented by
+			smells, end up being introduced by a change. Design degradation may
+			be related to both technical and social aspects in collaborative code
+			reviews. Unfortunately, there is no study that investigates whether
+			code review stakeholders (e.g, reviewers and team managers) could
+			benefit from approaches to distinguish and predict design impactful
+			changes with technical and/or social aspects. Therefore, in this
+			paper we present an empirical study involving seven open-source
+			systems, in which we evaluated the use of 6 ML algorithms to predict
+			impactful changes. We assessed 41 different features based on both
+			social and technical aspects. Our results show that Random Forest and
+			Gradient Boosting are the best algorithms in predicting impactful
+			changes within code reviews with very high accuracy. We also observed
+			that the use of technical features result in more precise
+			predictions. However, the use of social features alone, which are
+			available even before the code review starts (e.g., for team managers
+			or change assigners), also lead to highly-accurate prediction.
+			Therefore social and/or technical prediction models can be used to
+			support further design inspection of suspicious changes even early in
+			a code review process.</p>
+
+
+		<h3 id="downloads" class="page-header">Downloads</h3>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Artifact</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<th scope="row">1</th>
+					<td><a
+						href="download/description_and_detection_mechanisms.zip"
+						target="_blank">Complete description of degradation symptoms</a></td>
+					<td>This file contains the detailed descriptions for all types
+						of symptoms.
+				</tr>
+
+
+				<tr>
+					<th scope="row">2</th>
+					<td><a
+						href="https://drive.google.com/file/d/1_hTPI4tGfHpEzZbLWQBb4fdvBCbqvN-C/view?usp=sharing"
+						target="_blank">Complete set of extracted degradation symptoms
+							per revision</a></td>
+					<td>This file contains the raw data of types of symptoms
+						extracted for all revisions.
+				</tr>
+
+				<tr>
+					<th scope="row">3</th>
+					<td><a
+						href="download/design_impactful_changes_per_revision.zip"
+						target="_blank">Complete set of extracted design impactful
+							changes per revision</a></td>
+					<td>This file contains the raw data of design impactful
+						changes per revision and system.
+				</tr>
+
+
+				<tr>
+					<th scope="row">4</th>
+					<td><a href="download/extracted_features_per_revision.zip"
+						target="_blank">Complete set of extracted features for design
+							impactful change prediction</a></td>
+					<td>This file contains the raw data of extracted features
+						(both social and technical features) per revision and system.
+				</tr>
+
+
+				<tr>
+					<th scope="row">5</th>
+					<td><a
+						href="https://drive.google.com/file/d/14WWQkObLn3DLdnroNL4I7FDoTJDKurDP/view?usp=sharing"
+						target="_blank">Complete set of generated machine learning
+							models for predicting design impactful changes</a></td>
+					<td>This file contains the complete set of generated machine
+						learning models grouped by feature set (social only, technical
+						only, and social + technical together) and symptom category
+						(fine-grained smells and coarse-grained smells).
+				</tr>
+
+
+				<tr>
+					<th scope="row">6</th>
+					<td><a href="download/performance_ml_models.zip"
+						target="_blank">Complete evaluation of the performance of
+							machine learning models to predict design impactful changes</a></td>
+					<td>This file contains the complete description of the
+						performance evaluation of the machine learning models considering
+						the different combinations of feature set and symptom category
+						(fine-grained smells and coarse-grained smells).
+				</tr>
+
+
+				<tr>
+					<th scope="row">7</th>
+					<td><a href="download/features_importance.zip" target="_blank">Complete
+							set of the importance of features to predict design impactful
+							changes across models and projects</a></td>
+					<td>This file contains the complete set of features importance
+						grouped by different rankings.
+				</tr>
+
+
+				<tr>
+					<th scope="row">8</th>
+					<td><a href="download/features_statistics.zip" target="_blank">Complete
+							descriptive analysis of extracted features</a></td>
+					<td>This file contains the complete set of descriptive
+						analysis of extracted features (social and technical) per system.
+
+
+
+
+					
+				</tr>
+
+
+				<tr>
+					<th scope="row">9</th>
+					<td><a
+						href="download/friedman_test_with_ post_hoc_statistic.zip"
+						target="_blank">Results of the Friedman with post hoc test</a></td>
+					<td>This file contains the results, scripts, and
+						visualizations of the Friedman with post hoc test employed in RQ2
+						and RQ3.
+				</tr>
+
+
+				<tr>
+					<th scope="row">10</th>
+					<td><a href="download/wilcoxon_script.zip" target="_blank">Script
+							of the Wilcoxon test</a></td>
+					<td>This file contains the script used in RQ1.
+				</tr>
+
+
+
+				<tr>
+					<th scope="row">11</th>
+					<td><a href="download/features_description.zip"
+						target="_blank">Complete description of extracted features</a></td>
+					<td>This file contains the complete description of extracted
+						features (social and technical).
+				</tr>
+
+				<tr>
+					<th scope="row">12</th>
+					<td><a href="download/hyperparametrization.zip"
+						target="_blank">Complete description of hyperparametrization</a></td>
+					<td>This file contains the hyper parameterization used in each
+						ml model grouped by feature set, system, and smell granularity.
+				</tr>
+
+
+
+			</tbody>
+		</table>
+
+		<h3 class="page-header" id="authors">Authors</h3>
+
+		<!--<p>Any questions and/or suggestions should be sent to the paper
+			authors as follows.</p> -->
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>E-mail</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Anonymous Authors</td>
+					<td>anonymous@email.com</td>
+				</tr>
+
+			</tbody>
+		</table>
+</body>
+</html>
+
